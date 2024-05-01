@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(243 244 246);
+}
+
+.elementoInfiniteScroll {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  place-items: center;
+}
+
+.limitarLetras {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-align: left;
+}
+
+#menu a.active {
+  color: red;
+}
+
+.menu a.active {
+  color: black;
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .responsive {
+    display: none;
+  }
+
+  .categorias {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+
+.mensagem_imagem_fundo {
+  background-image: url("/src/assets/principal.jpg");
+  background-position: center;
+}
